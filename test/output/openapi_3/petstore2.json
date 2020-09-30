@@ -587,10 +587,20 @@
         ],
         "requestBody": {
           "content": {
-            "application/octet-stream": {
+            "multipart/form-data": {
               "schema": {
-                "format": "binary",
-                "type": "string"
+                "properties": {
+                  "additionalMetadata": {
+                    "description": "Additional data to pass to server",
+                    "type": "string"
+                  },
+                  "file": {
+                    "description": "file to upload",
+                    "format": "binary",
+                    "type": "string"
+                  }
+                },
+                "type": "object"
               }
             }
           }

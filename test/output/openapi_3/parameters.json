@@ -162,7 +162,6 @@
       }
     }
   },
-  "servers": [],
   "tags": [
     {
       "description": "Group of all messages-related resources.",
