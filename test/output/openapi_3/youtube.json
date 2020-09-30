@@ -164,8 +164,7 @@
         "description": "An activity resource contains information about an action that a particular channel, or user, has taken on YouTube.The actions reported in activity feeds include rating a video, sharing a video, marking a video as a favorite, commenting on a video, uploading a video, and so forth. Each activity resource identifies the type of action, the channel associated with the action, and the resource(s) associated with the action, such as the video that was rated or uploaded.",
         "properties": {
           "contentDetails": {
-            "$ref": "#/components/schemas/ActivityContentDetails",
-            "description": "The contentDetails object contains information about the content associated with the activity. For example, if the snippet.type value is videoRated, then the contentDetails object's content identifies the rated video."
+            "$ref": "#/components/schemas/ActivityContentDetails"
           },
           "etag": {
             "description": "Etag of this resource.",
@@ -181,8 +180,7 @@
             "type": "string"
           },
           "snippet": {
-            "$ref": "#/components/schemas/ActivitySnippet",
-            "description": "The snippet object contains basic details about the activity, including the activity's type and group ID."
+            "$ref": "#/components/schemas/ActivitySnippet"
           }
         },
         "type": "object"
@@ -191,48 +189,37 @@
         "description": "Details about the content of an activity: the video that was shared, the channel that was subscribed to, etc.",
         "properties": {
           "bulletin": {
-            "$ref": "#/components/schemas/ActivityContentDetailsBulletin",
-            "description": "The bulletin object contains details about a channel bulletin post. This object is only present if the snippet.type is bulletin."
+            "$ref": "#/components/schemas/ActivityContentDetailsBulletin"
           },
           "channelItem": {
-            "$ref": "#/components/schemas/ActivityContentDetailsChannelItem",
-            "description": "The channelItem object contains details about a resource which was added to a channel. This property is only present if the snippet.type is channelItem."
+            "$ref": "#/components/schemas/ActivityContentDetailsChannelItem"
           },
           "comment": {
-            "$ref": "#/components/schemas/ActivityContentDetailsComment",
-            "description": "The comment object contains information about a resource that received a comment. This property is only present if the snippet.type is comment."
+            "$ref": "#/components/schemas/ActivityContentDetailsComment"
           },
           "favorite": {
-            "$ref": "#/components/schemas/ActivityContentDetailsFavorite",
-            "description": "The favorite object contains information about a video that was marked as a favorite video. This property is only present if the snippet.type is favorite."
+            "$ref": "#/components/schemas/ActivityContentDetailsFavorite"
           },
           "like": {
-            "$ref": "#/components/schemas/ActivityContentDetailsLike",
-            "description": "The like object contains information about a resource that received a positive (like) rating. This property is only present if the snippet.type is like."
+            "$ref": "#/components/schemas/ActivityContentDetailsLike"
           },
           "playlistItem": {
-            "$ref": "#/components/schemas/ActivityContentDetailsPlaylistItem",
-            "description": "The playlistItem object contains information about a new playlist item. This property is only present if the snippet.type is playlistItem."
+            "$ref": "#/components/schemas/ActivityContentDetailsPlaylistItem"
           },
           "promotedItem": {
-            "$ref": "#/components/schemas/ActivityContentDetailsPromotedItem",
-            "description": "The promotedItem object contains details about a resource which is being promoted. This property is only present if the snippet.type is promotedItem."
+            "$ref": "#/components/schemas/ActivityContentDetailsPromotedItem"
           },
           "recommendation": {
-            "$ref": "#/components/schemas/ActivityContentDetailsRecommendation",
-            "description": "The recommendation object contains information about a recommended resource. This property is only present if the snippet.type is recommendation."
+            "$ref": "#/components/schemas/ActivityContentDetailsRecommendation"
           },
           "social": {
-            "$ref": "#/components/schemas/ActivityContentDetailsSocial",
-            "description": "The social object contains details about a social network post. This property is only present if the snippet.type is social."
+            "$ref": "#/components/schemas/ActivityContentDetailsSocial"
           },
           "subscription": {
-            "$ref": "#/components/schemas/ActivityContentDetailsSubscription",
-            "description": "The subscription object contains information about a channel that a user subscribed to. This property is only present if the snippet.type is subscription."
+            "$ref": "#/components/schemas/ActivityContentDetailsSubscription"
           },
           "upload": {
-            "$ref": "#/components/schemas/ActivityContentDetailsUpload",
-            "description": "The upload object contains information about the uploaded video. This property is only present if the snippet.type is upload."
+            "$ref": "#/components/schemas/ActivityContentDetailsUpload"
           }
         },
         "type": "object"
@@ -241,8 +228,7 @@
         "description": "Details about a channel bulletin post.",
         "properties": {
           "resourceId": {
-            "$ref": "#/components/schemas/ResourceId",
-            "description": "The resourceId object contains information that identifies the resource associated with a bulletin post."
+            "$ref": "#/components/schemas/ResourceId"
           }
         },
         "type": "object"
@@ -251,8 +237,7 @@
         "description": "Details about a resource which was added to a channel.",
         "properties": {
           "resourceId": {
-            "$ref": "#/components/schemas/ResourceId",
-            "description": "The resourceId object contains information that identifies the resource that was added to the channel."
+            "$ref": "#/components/schemas/ResourceId"
           }
         },
         "type": "object"
@@ -261,8 +246,7 @@
         "description": "Information about a resource that received a comment.",
         "properties": {
           "resourceId": {
-            "$ref": "#/components/schemas/ResourceId",
-            "description": "The resourceId object contains information that identifies the resource associated with the comment."
+            "$ref": "#/components/schemas/ResourceId"
           }
         },
         "type": "object"
@@ -271,8 +255,7 @@
         "description": "Information about a video that was marked as a favorite video.",
         "properties": {
           "resourceId": {
-            "$ref": "#/components/schemas/ResourceId",
-            "description": "The resourceId object contains information that identifies the resource that was marked as a favorite."
+            "$ref": "#/components/schemas/ResourceId"
           }
         },
         "type": "object"
@@ -281,8 +264,7 @@
         "description": "Information about a resource that received a positive (like) rating.",
         "properties": {
           "resourceId": {
-            "$ref": "#/components/schemas/ResourceId",
-            "description": "The resourceId object contains information that identifies the rated resource."
+            "$ref": "#/components/schemas/ResourceId"
           }
         },
         "type": "object"
@@ -299,8 +281,7 @@
             "type": "string"
           },
           "resourceId": {
-            "$ref": "#/components/schemas/ResourceId",
-            "description": "The resourceId object contains information about the resource that was added to the playlist."
+            "$ref": "#/components/schemas/ResourceId"
           }
         },
         "type": "object"
@@ -375,12 +356,10 @@
             "type": "string"
           },
           "resourceId": {
-            "$ref": "#/components/schemas/ResourceId",
-            "description": "The resourceId object contains information that identifies the recommended resource."
+            "$ref": "#/components/schemas/ResourceId"
           },
           "seedResourceId": {
-            "$ref": "#/components/schemas/ResourceId",
-            "description": "The seedResourceId object contains information about the resource that caused the recommendation."
+            "$ref": "#/components/schemas/ResourceId"
           }
         },
         "type": "object"
@@ -401,8 +380,7 @@
             "type": "string"
           },
           "resourceId": {
-            "$ref": "#/components/schemas/ResourceId",
-            "description": "The resourceId object encapsulates information that identifies the resource associated with a social network post."
+            "$ref": "#/components/schemas/ResourceId"
           },
           "type": {
             "description": "The name of the social network.",
@@ -421,8 +399,7 @@
         "description": "Information about a channel that a user subscribed to.",
         "properties": {
           "resourceId": {
-            "$ref": "#/components/schemas/ResourceId",
-            "description": "The resourceId object contains information that identifies the resource that the user subscribed to."
+            "$ref": "#/components/schemas/ResourceId"
           }
         },
         "type": "object"
@@ -505,8 +482,7 @@
             "type": "string"
           },
           "thumbnails": {
-            "$ref": "#/components/schemas/ThumbnailDetails",
-            "description": "A map of thumbnail images associated with the resource that is primarily associated with the activity. For each object in the map, the key is the name of the thumbnail image, and the value is an object that contains other information about the thumbnail."
+            "$ref": "#/components/schemas/ThumbnailDetails"
           },
           "title": {
             "description": "The title of the resource primarily associated with the activity.",
@@ -549,8 +525,7 @@
             "type": "string"
           },
           "snippet": {
-            "$ref": "#/components/schemas/CaptionSnippet",
-            "description": "The snippet object contains basic details about the caption."
+            "$ref": "#/components/schemas/CaptionSnippet"
           }
         },
         "type": "object"
@@ -672,8 +647,7 @@
             "type": "string"
           },
           "ingestionInfo": {
-            "$ref": "#/components/schemas/IngestionInfo",
-            "description": "The ingestionInfo object contains information that YouTube provides that you need to transmit your RTMP or HTTP stream to YouTube."
+            "$ref": "#/components/schemas/IngestionInfo"
           },
           "ingestionType": {
             "description": "The method or protocol used to transmit the video stream.",
@@ -690,24 +664,19 @@
         "description": "A channel resource contains information about a YouTube channel.",
         "properties": {
           "auditDetails": {
-            "$ref": "#/components/schemas/ChannelAuditDetails",
-            "description": "The auditionDetails object encapsulates channel data that is relevant for YouTube Partners during the audition process."
+            "$ref": "#/components/schemas/ChannelAuditDetails"
           },
           "brandingSettings": {
-            "$ref": "#/components/schemas/ChannelBrandingSettings",
-            "description": "The brandingSettings object encapsulates information about the branding of the channel."
+            "$ref": "#/components/schemas/ChannelBrandingSettings"
           },
           "contentDetails": {
-            "$ref": "#/components/schemas/ChannelContentDetails",
-            "description": "The contentDetails object encapsulates information about the channel's content."
+            "$ref": "#/components/schemas/ChannelContentDetails"
           },
           "contentOwnerDetails": {
-            "$ref": "#/components/schemas/ChannelContentOwnerDetails",
-            "description": "The contentOwnerDetails object encapsulates channel data that is relevant for YouTube Partners linked with the channel."
+            "$ref": "#/components/schemas/ChannelContentOwnerDetails"
           },
           "conversionPings": {
-            "$ref": "#/components/schemas/ChannelConversionPings",
-            "description": "The conversionPings object encapsulates information about conversion pings that need to be respected by the channel."
+            "$ref": "#/components/schemas/ChannelConversionPings"
           },
           "etag": {
             "description": "Etag of this resource.",
@@ -718,8 +687,7 @@
             "type": "string"
           },
           "invideoPromotion": {
-            "$ref": "#/components/schemas/InvideoPromotion",
-            "description": "The invideoPromotion object encapsulates information about promotion campaign associated with the channel."
+            "$ref": "#/components/schemas/InvideoPromotion"
           },
           "kind": {
             "default": "youtube#channel",
@@ -728,27 +696,22 @@
           },
           "localizations": {
             "additionalProperties": {
-              "$ref": "#/components/schemas/ChannelLocalization",
-              "description": "The language tag, using string since map_key require simple types."
+              "$ref": "#/components/schemas/ChannelLocalization"
             },
             "description": "Localizations for different languages",
             "type": "object"
           },
           "snippet": {
-            "$ref": "#/components/schemas/ChannelSnippet",
-            "description": "The snippet object contains basic details about the channel, such as its title, description, and thumbnail images."
+            "$ref": "#/components/schemas/ChannelSnippet"
           },
           "statistics": {
-            "$ref": "#/components/schemas/ChannelStatistics",
-            "description": "The statistics object encapsulates statistics for the channel."
+            "$ref": "#/components/schemas/ChannelStatistics"
           },
           "status": {
-            "$ref": "#/components/schemas/ChannelStatus",
-            "description": "The status object encapsulates information about the privacy status of the channel."
+            "$ref": "#/components/schemas/ChannelStatus"
           },
           "topicDetails": {
-            "$ref": "#/components/schemas/ChannelTopicDetails",
-            "description": "The topicDetails object encapsulates information about Freebase topics associated with the channel."
+            "$ref": "#/components/schemas/ChannelTopicDetails"
           }
         },
         "type": "object"
@@ -798,8 +761,7 @@
         "description": "Branding properties of a YouTube channel.",
         "properties": {
           "channel": {
-            "$ref": "#/components/schemas/ChannelSettings",
-            "description": "Branding properties for the channel view."
+            "$ref": "#/components/schemas/ChannelSettings"
           },
           "hints": {
             "description": "Additional experimental branding properties.",
@@ -809,12 +771,10 @@
             "type": "array"
           },
           "image": {
-            "$ref": "#/components/schemas/ImageSettings",
-            "description": "Branding properties for branding images."
+            "$ref": "#/components/schemas/ImageSettings"
           },
           "watch": {
-            "$ref": "#/components/schemas/WatchSettings",
-            "description": "Branding properties for the watch page."
+            "$ref": "#/components/schemas/WatchSettings"
           }
         },
         "type": "object"
@@ -969,8 +929,7 @@
       "ChannelSection": {
         "properties": {
           "contentDetails": {
-            "$ref": "#/components/schemas/ChannelSectionContentDetails",
-            "description": "The contentDetails object contains details about the channel section content, such as a list of playlists or channels featured in the section."
+            "$ref": "#/components/schemas/ChannelSectionContentDetails"
           },
           "etag": {
             "description": "Etag of this resource.",
@@ -987,19 +946,16 @@
           },
           "localizations": {
             "additionalProperties": {
-              "$ref": "#/components/schemas/ChannelSectionLocalization",
-              "description": "The language tag, using string since map_key require simple types."
+              "$ref": "#/components/schemas/ChannelSectionLocalization"
             },
             "description": "Localizations for different languages",
             "type": "object"
           },
           "snippet": {
-            "$ref": "#/components/schemas/ChannelSectionSnippet",
-            "description": "The snippet object contains basic details about the channel section, such as its type, style and title."
+            "$ref": "#/components/schemas/ChannelSectionSnippet"
           },
           "targeting": {
-            "$ref": "#/components/schemas/ChannelSectionTargeting",
-            "description": "The targeting object contains basic targeting settings about the channel section."
+            "$ref": "#/components/schemas/ChannelSectionTargeting"
           }
         },
         "type": "object"
@@ -1075,8 +1031,7 @@
             "type": "string"
           },
           "localized": {
-            "$ref": "#/components/schemas/ChannelSectionLocalization",
-            "description": "Localized title, read-only."
+            "$ref": "#/components/schemas/ChannelSectionLocalization"
           },
           "position": {
             "description": "The position of the channel section in the channel.",
@@ -1229,8 +1184,7 @@
             "type": "string"
           },
           "localized": {
-            "$ref": "#/components/schemas/ChannelLocalization",
-            "description": "Localized title and description, read-only."
+            "$ref": "#/components/schemas/ChannelLocalization"
           },
           "publishedAt": {
             "description": "The date and time that the channel was created. The value is specified in ISO 8601 (YYYY-MM-DDThh:mm:ss.sZ) format.",
@@ -1238,8 +1192,7 @@
             "type": "string"
           },
           "thumbnails": {
-            "$ref": "#/components/schemas/ThumbnailDetails",
-            "description": "A map of thumbnail images associated with the channel. For each object in the map, the key is the name of the thumbnail image, and the value is an object that contains other information about the thumbnail."
+            "$ref": "#/components/schemas/ThumbnailDetails"
           },
           "title": {
             "description": "The channel's title.",
@@ -1337,8 +1290,7 @@
             "type": "string"
           },
           "snippet": {
-            "$ref": "#/components/schemas/CommentSnippet",
-            "description": "The snippet object contains basic details about the comment."
+            "$ref": "#/components/schemas/CommentSnippet"
           }
         },
         "type": "object"
@@ -1386,8 +1338,7 @@
         "description": "Basic details about a comment, such as its author and text.",
         "properties": {
           "authorChannelId": {
-            "$ref": "#/components/schemas/ChannelId",
-            "description": "The id of the author's YouTube channel, if any."
+            "$ref": "#/components/schemas/ChannelId"
           },
           "authorChannelUrl": {
             "description": "Link to the author's YouTube channel, if any.",
@@ -1484,12 +1435,10 @@
             "type": "string"
           },
           "replies": {
-            "$ref": "#/components/schemas/CommentThreadReplies",
-            "description": "The replies object contains a limited number of replies (if any) to the top level comment found in the snippet."
+            "$ref": "#/components/schemas/CommentThreadReplies"
           },
           "snippet": {
-            "$ref": "#/components/schemas/CommentThreadSnippet",
-            "description": "The snippet object contains basic details about the comment thread and also the top level comment."
+            "$ref": "#/components/schemas/CommentThreadSnippet"
           }
         },
         "type": "object"
@@ -1562,8 +1511,7 @@
             "type": "boolean"
           },
           "topLevelComment": {
-            "$ref": "#/components/schemas/Comment",
-            "description": "The top level comment of this thread."
+            "$ref": "#/components/schemas/Comment"
           },
           "totalReplyCount": {
             "description": "The total number of replies (not including the top level comment).",
@@ -2420,8 +2368,7 @@
             "type": "string"
           },
           "snippet": {
-            "$ref": "#/components/schemas/GuideCategorySnippet",
-            "description": "The snippet object contains basic details about the category, such as its title."
+            "$ref": "#/components/schemas/GuideCategorySnippet"
           }
         },
         "type": "object"
@@ -2500,8 +2447,7 @@
             "type": "string"
           },
           "snippet": {
-            "$ref": "#/components/schemas/I18nLanguageSnippet",
-            "description": "The snippet object contains basic details about the i18n language, such as language code and human-readable name."
+            "$ref": "#/components/schemas/I18nLanguageSnippet"
           }
         },
         "type": "object"
@@ -2566,8 +2512,7 @@
             "type": "string"
           },
           "snippet": {
-            "$ref": "#/components/schemas/I18nRegionSnippet",
-            "description": "The snippet object contains basic details about the i18n region, such as region code and human-readable name."
+            "$ref": "#/components/schemas/I18nRegionSnippet"
           }
         },
         "type": "object"
@@ -2619,8 +2564,7 @@
         "description": "Branding properties for images associated with the channel.",
         "properties": {
           "backgroundImageUrl": {
-            "$ref": "#/components/schemas/LocalizedProperty",
-            "description": "The URL for the background image shown on the video watch page. The image should be 1200px by 615px, with a maximum file size of 128k."
+            "$ref": "#/components/schemas/LocalizedProperty"
           },
           "bannerExternalUrl": {
             "description": "This is used only in update requests; if it's set, we use this URL to generate all of the above banner URLs.",
@@ -2683,20 +2627,16 @@
             "type": "string"
           },
           "largeBrandedBannerImageImapScript": {
-            "$ref": "#/components/schemas/LocalizedProperty",
-            "description": "The image map script for the large banner image."
+            "$ref": "#/components/schemas/LocalizedProperty"
           },
           "largeBrandedBannerImageUrl": {
-            "$ref": "#/components/schemas/LocalizedProperty",
-            "description": "The URL for the 854px by 70px image that appears below the video player in the expanded video view of the video watch page."
+            "$ref": "#/components/schemas/LocalizedProperty"
           },
           "smallBrandedBannerImageImapScript": {
-            "$ref": "#/components/schemas/LocalizedProperty",
-            "description": "The image map script for the small banner image."
+            "$ref": "#/components/schemas/LocalizedProperty"
           },
           "smallBrandedBannerImageUrl": {
-            "$ref": "#/components/schemas/LocalizedProperty",
-            "description": "The URL for the 640px by 70px banner image that appears below the video player in the default view of the video watch page."
+            "$ref": "#/components/schemas/LocalizedProperty"
           },
           "trackingImageUrl": {
             "description": "The URL for a 1px by 1px tracking pixel that can be used to collect statistics for views of the channel or video pages.",
@@ -2775,8 +2715,7 @@
         "description": "Describes an invideo promotion campaign consisting of multiple promoted items. A campaign belongs to a single channel_id.",
         "properties": {
           "defaultTiming": {
-            "$ref": "#/components/schemas/InvideoTiming",
-            "description": "The default temporal position within the video where the promoted item will be displayed. Can be overriden by more specific timing in the item."
+            "$ref": "#/components/schemas/InvideoTiming"
           },
           "items": {
             "description": "List of promoted items in decreasing priority.",
@@ -2786,8 +2725,7 @@
             "type": "array"
           },
           "position": {
-            "$ref": "#/components/schemas/InvideoPosition",
-            "description": "The spatial position within the video where the promoted item will be displayed."
+            "$ref": "#/components/schemas/InvideoPosition"
           },
           "useSmartTiming": {
             "description": "Indicates whether the channel's promotional campaign uses \"smart timing.\" This feature attempts to show promotions at a point in the video when they are more likely to be clicked and less likely to disrupt the viewing experience. This feature also picks up a single promotion to show on each video.",
@@ -2832,8 +2770,7 @@
         "description": "A liveBroadcast resource represents an event that will be streamed, via live video, on YouTube.",
         "properties": {
           "contentDetails": {
-            "$ref": "#/components/schemas/LiveBroadcastContentDetails",
-            "description": "The contentDetails object contains information about the event's video content, such as whether the content can be shown in an embedded video player or if it will be archived and therefore available for viewing after the event has concluded."
+            "$ref": "#/components/schemas/LiveBroadcastContentDetails"
           },
           "etag": {
             "description": "Etag of this resource.",
@@ -2849,12 +2786,10 @@
             "type": "string"
           },
           "snippet": {
-            "$ref": "#/components/schemas/LiveBroadcastSnippet",
-            "description": "The snippet object contains basic details about the event, including its title, description, start time, and end time."
+            "$ref": "#/components/schemas/LiveBroadcastSnippet"
           },
           "status": {
-            "$ref": "#/components/schemas/LiveBroadcastStatus",
-            "description": "The status object contains information about the event's status."
+            "$ref": "#/components/schemas/LiveBroadcastStatus"
           }
         },
         "type": "object"
@@ -2883,8 +2818,7 @@
             "type": "boolean"
           },
           "monitorStream": {
-            "$ref": "#/components/schemas/MonitorStreamInfo",
-            "description": "The monitorStream object contains information about the monitor stream, which the broadcaster can use to review the event content before the broadcast stream is shown publicly."
+            "$ref": "#/components/schemas/MonitorStreamInfo"
           },
           "recordFromStart": {
             "description": "Automatically start recording after the event goes live. The default value for this property is true.\n\n\n\nImportant: You must also set the enableDvr property's value to true if you want the playback to be available immediately after the broadcast ends. If you set this property's value to true but do not also set the enableDvr property to true, there may be a delay of around one day before the archived video will be available for playback.",
@@ -2979,8 +2913,7 @@
             "type": "string"
           },
           "thumbnails": {
-            "$ref": "#/components/schemas/ThumbnailDetails",
-            "description": "A map of thumbnail images associated with the broadcast. For each nested object in this object, the key is the name of the thumbnail image, and the value is an object that contains other information about the thumbnail."
+            "$ref": "#/components/schemas/ThumbnailDetails"
           },
           "title": {
             "description": "The broadcast's title. Note that the broadcast represents exactly one YouTube video. You can set this field by modifying the broadcast resource or by setting the title field of the corresponding video resource.",
@@ -3042,12 +2975,10 @@
         "description": "A live stream describes a live ingestion point.",
         "properties": {
           "cdn": {
-            "$ref": "#/components/schemas/CdnSettings",
-            "description": "The cdn object defines the live stream's content delivery network (CDN) settings. These settings provide details about the manner in which you stream your content to YouTube."
+            "$ref": "#/components/schemas/CdnSettings"
           },
           "contentDetails": {
-            "$ref": "#/components/schemas/LiveStreamContentDetails",
-            "description": "The content_details object contains information about the stream, including the closed captions ingestion URL."
+            "$ref": "#/components/schemas/LiveStreamContentDetails"
           },
           "etag": {
             "description": "Etag of this resource.",
@@ -3063,12 +2994,10 @@
             "type": "string"
           },
           "snippet": {
-            "$ref": "#/components/schemas/LiveStreamSnippet",
-            "description": "The snippet object contains basic details about the stream, including its channel, title, and description."
+            "$ref": "#/components/schemas/LiveStreamSnippet"
           },
           "status": {
-            "$ref": "#/components/schemas/LiveStreamStatus",
-            "description": "The status object contains information about live stream's status."
+            "$ref": "#/components/schemas/LiveStreamStatus"
           }
         },
         "type": "object"
@@ -3248,8 +3177,7 @@
         "description": "Brief description of the live stream status.",
         "properties": {
           "healthStatus": {
-            "$ref": "#/components/schemas/LiveStreamHealthStatus",
-            "description": "The health status of the stream."
+            "$ref": "#/components/schemas/LiveStreamHealthStatus"
           },
           "streamStatus": {
             "enum": [
@@ -3270,8 +3198,7 @@
             "type": "string"
           },
           "defaultLanguage": {
-            "$ref": "#/components/schemas/LanguageTag",
-            "description": "The language of the default property."
+            "$ref": "#/components/schemas/LanguageTag"
           },
           "localized": {
             "items": {
@@ -3332,8 +3259,7 @@
         "description": "A playlist resource represents a YouTube playlist. A playlist is a collection of videos that can be viewed sequentially and shared with other users. A playlist can contain up to 200 videos, and YouTube does not limit the number of playlists that each user creates. By default, playlists are publicly visible to other users, but playlists can be public or private.\n\nYouTube also uses playlists to identify special collections of videos for a channel, such as:  \n- uploaded videos \n- favorite videos \n- positively rated (liked) videos \n- watch history \n- watch later  To be more specific, these lists are associated with a channel, which is a collection of a person, group, or company's videos, playlists, and other YouTube information. You can retrieve the playlist IDs for each of these lists from the  channel resource for a given channel.\n\nYou can then use the   playlistItems.list method to retrieve any of those lists. You can also add or remove items from those lists by calling the   playlistItems.insert and   playlistItems.delete methods.",
         "properties": {
           "contentDetails": {
-            "$ref": "#/components/schemas/PlaylistContentDetails",
-            "description": "The contentDetails object contains information like video count."
+            "$ref": "#/components/schemas/PlaylistContentDetails"
           },
           "etag": {
             "description": "Etag of this resource.",
@@ -3350,23 +3276,19 @@
           },
           "localizations": {
             "additionalProperties": {
-              "$ref": "#/components/schemas/PlaylistLocalization",
-              "description": "The language tag, using string since map_key require simple types."
+              "$ref": "#/components/schemas/PlaylistLocalization"
             },
             "description": "Localizations for different languages",
             "type": "object"
           },
           "player": {
-            "$ref": "#/components/schemas/PlaylistPlayer",
-            "description": "The player object contains information that you would use to play the playlist in an embedded player."
+            "$ref": "#/components/schemas/PlaylistPlayer"
           },
           "snippet": {
-            "$ref": "#/components/schemas/PlaylistSnippet",
-            "description": "The snippet object contains basic details about the playlist, such as its title and description."
+            "$ref": "#/components/schemas/PlaylistSnippet"
           },
           "status": {
-            "$ref": "#/components/schemas/PlaylistStatus",
-            "description": "The status object contains status information for the playlist."
+            "$ref": "#/components/schemas/PlaylistStatus"
           }
         },
         "type": "object"
@@ -3385,8 +3307,7 @@
         "description": "A playlistItem resource identifies another resource, such as a video, that is included in a playlist. In addition, the playlistItem  resource contains details about the included resource that pertain specifically to how that resource is used in that playlist.\n\nYouTube uses playlists to identify special collections of videos for a channel, such as:  \n- uploaded videos \n- favorite videos \n- positively rated (liked) videos \n- watch history \n- watch later  To be more specific, these lists are associated with a channel, which is a collection of a person, group, or company's videos, playlists, and other YouTube information.\n\nYou can retrieve the playlist IDs for each of these lists from the  channel resource  for a given channel. You can then use the   playlistItems.list method to retrieve any of those lists. You can also add or remove items from those lists by calling the   playlistItems.insert and   playlistItems.delete methods. For example, if a user gives a positive rating to a video, you would insert that video into the liked videos playlist for that user's channel.",
         "properties": {
           "contentDetails": {
-            "$ref": "#/components/schemas/PlaylistItemContentDetails",
-            "description": "The contentDetails object is included in the resource if the included item is a YouTube video. The object contains additional information about the video."
+            "$ref": "#/components/schemas/PlaylistItemContentDetails"
           },
           "etag": {
             "description": "Etag of this resource.",
@@ -3402,12 +3323,10 @@
             "type": "string"
           },
           "snippet": {
-            "$ref": "#/components/schemas/PlaylistItemSnippet",
-            "description": "The snippet object contains basic details about the playlist item, such as its title and position in the playlist."
+            "$ref": "#/components/schemas/PlaylistItemSnippet"
           },
           "status": {
-            "$ref": "#/components/schemas/PlaylistItemStatus",
-            "description": "The status object contains information about the playlist item's privacy status."
+            "$ref": "#/components/schemas/PlaylistItemStatus"
           }
         },
         "type": "object"
@@ -3506,12 +3425,10 @@
             "type": "string"
           },
           "resourceId": {
-            "$ref": "#/components/schemas/ResourceId",
-            "description": "The id object contains information that can be used to uniquely identify the resource that is included in the playlist as the playlist item."
+            "$ref": "#/components/schemas/ResourceId"
           },
           "thumbnails": {
-            "$ref": "#/components/schemas/ThumbnailDetails",
-            "description": "A map of thumbnail images associated with the playlist item. For each object in the map, the key is the name of the thumbnail image, and the value is an object that contains other information about the thumbnail."
+            "$ref": "#/components/schemas/ThumbnailDetails"
           },
           "title": {
             "description": "The item's title.",
@@ -3621,8 +3538,7 @@
             "type": "string"
           },
           "localized": {
-            "$ref": "#/components/schemas/PlaylistLocalization",
-            "description": "Localized title and description, read-only."
+            "$ref": "#/components/schemas/PlaylistLocalization"
           },
           "publishedAt": {
             "description": "The date and time that the playlist was created. The value is specified in ISO 8601 (YYYY-MM-DDThh:mm:ss.sZ) format.",
@@ -3637,8 +3553,7 @@
             "type": "array"
           },
           "thumbnails": {
-            "$ref": "#/components/schemas/ThumbnailDetails",
-            "description": "A map of thumbnail images associated with the playlist. For each object in the map, the key is the name of the thumbnail image, and the value is an object that contains other information about the thumbnail."
+            "$ref": "#/components/schemas/ThumbnailDetails"
           },
           "title": {
             "description": "The playlist's title.",
@@ -3669,16 +3584,14 @@
             "type": "string"
           },
           "id": {
-            "$ref": "#/components/schemas/PromotedItemId",
-            "description": "Identifies the promoted item."
+            "$ref": "#/components/schemas/PromotedItemId"
           },
           "promotedByContentOwner": {
             "description": "If true, the content owner's name will be used when displaying the promotion. This field can only be set when the update is made on behalf of the content owner.",
             "type": "boolean"
           },
           "timing": {
-            "$ref": "#/components/schemas/InvideoTiming",
-            "description": "The temporal position within the video where the promoted item will be displayed. If present, it overrides the default timing."
+            "$ref": "#/components/schemas/InvideoTiming"
           }
         },
         "type": "object"
@@ -3797,8 +3710,7 @@
             "type": "string"
           },
           "id": {
-            "$ref": "#/components/schemas/ResourceId",
-            "description": "The id object contains information that can be used to uniquely identify the resource that matches the search request."
+            "$ref": "#/components/schemas/ResourceId"
           },
           "kind": {
             "default": "youtube#searchResult",
@@ -3806,8 +3718,7 @@
             "type": "string"
           },
           "snippet": {
-            "$ref": "#/components/schemas/SearchResultSnippet",
-            "description": "The snippet object contains basic details about a search result, such as its title or description. For example, if the search result is a video, then the title will be the video's title and the description will be the video's description."
+            "$ref": "#/components/schemas/SearchResultSnippet"
           }
         },
         "type": "object"
@@ -3842,8 +3753,7 @@
             "type": "string"
           },
           "thumbnails": {
-            "$ref": "#/components/schemas/ThumbnailDetails",
-            "description": "A map of thumbnail images associated with the search result. For each object in the map, the key is the name of the thumbnail image, and the value is an object that contains other information about the thumbnail."
+            "$ref": "#/components/schemas/ThumbnailDetails"
           },
           "title": {
             "description": "The title of the search result.",
@@ -3856,8 +3766,7 @@
         "description": "A subscription resource contains information about a YouTube user subscription. A subscription notifies a user when new videos are added to a channel or when another user takes one of several actions on YouTube, such as uploading a video, rating a video, or commenting on a video.",
         "properties": {
           "contentDetails": {
-            "$ref": "#/components/schemas/SubscriptionContentDetails",
-            "description": "The contentDetails object contains basic statistics about the subscription."
+            "$ref": "#/components/schemas/SubscriptionContentDetails"
           },
           "etag": {
             "description": "Etag of this resource.",
@@ -3873,12 +3782,10 @@
             "type": "string"
           },
           "snippet": {
-            "$ref": "#/components/schemas/SubscriptionSnippet",
-            "description": "The snippet object contains basic details about the subscription, including its title and the channel that the user subscribed to."
+            "$ref": "#/components/schemas/SubscriptionSnippet"
           },
           "subscriberSnippet": {
-            "$ref": "#/components/schemas/SubscriptionSubscriberSnippet",
-            "description": "The subscriberSnippet object contains basic details about the sbuscriber."
+            "$ref": "#/components/schemas/SubscriptionSubscriberSnippet"
           }
         },
         "type": "object"
@@ -3971,12 +3878,10 @@
             "type": "string"
           },
           "resourceId": {
-            "$ref": "#/components/schemas/ResourceId",
-            "description": "The id object contains information about the channel that the user subscribed to."
+            "$ref": "#/components/schemas/ResourceId"
           },
           "thumbnails": {
-            "$ref": "#/components/schemas/ThumbnailDetails",
-            "description": "A map of thumbnail images associated with the video. For each object in the map, the key is the name of the thumbnail image, and the value is an object that contains other information about the thumbnail."
+            "$ref": "#/components/schemas/ThumbnailDetails"
           },
           "title": {
             "description": "The subscription's title.",
@@ -3997,8 +3902,7 @@
             "type": "string"
           },
           "thumbnails": {
-            "$ref": "#/components/schemas/ThumbnailDetails",
-            "description": "Thumbnails for this subscriber."
+            "$ref": "#/components/schemas/ThumbnailDetails"
           },
           "title": {
             "description": "The title of the subscriber.",
@@ -4031,24 +3935,19 @@
         "description": "Internal representation of thumbnails for a YouTube resource.",
         "properties": {
           "default": {
-            "$ref": "#/components/schemas/Thumbnail",
-            "description": "The default image for this resource."
+            "$ref": "#/components/schemas/Thumbnail"
           },
           "high": {
-            "$ref": "#/components/schemas/Thumbnail",
-            "description": "The high quality image for this resource."
+            "$ref": "#/components/schemas/Thumbnail"
           },
           "maxres": {
-            "$ref": "#/components/schemas/Thumbnail",
-            "description": "The maximum resolution quality image for this resource."
+            "$ref": "#/components/schemas/Thumbnail"
           },
           "medium": {
-            "$ref": "#/components/schemas/Thumbnail",
-            "description": "The medium quality image for this resource."
+            "$ref": "#/components/schemas/Thumbnail"
           },
           "standard": {
-            "$ref": "#/components/schemas/Thumbnail",
-            "description": "The standard quality image for this resource."
+            "$ref": "#/components/schemas/Thumbnail"
           }
         },
         "type": "object"
@@ -4090,24 +3989,20 @@
         "description": "A video resource represents a YouTube video.",
         "properties": {
           "ageGating": {
-            "$ref": "#/components/schemas/VideoAgeGating",
-            "description": "Age restriction details related to a video."
+            "$ref": "#/components/schemas/VideoAgeGating"
           },
           "contentDetails": {
-            "$ref": "#/components/schemas/VideoContentDetails",
-            "description": "The contentDetails object contains information about the video content, including the length of the video and its aspect ratio."
+            "$ref": "#/components/schemas/VideoContentDetails"
           },
           "conversionPings": {
-            "$ref": "#/components/schemas/VideoConversionPings",
-            "description": "The conversionPings object encapsulates information about url pings that need to be respected by the App in different video contexts."
+            "$ref": "#/components/schemas/VideoConversionPings"
           },
           "etag": {
             "description": "Etag of this resource.",
             "type": "string"
           },
           "fileDetails": {
-            "$ref": "#/components/schemas/VideoFileDetails",
-            "description": "The fileDetails object encapsulates information about the video file that was uploaded to YouTube, including the file's resolution, duration, audio and video codecs, stream bitrates, and more. This data can only be retrieved by the video owner."
+            "$ref": "#/components/schemas/VideoFileDetails"
           },
           "id": {
             "description": "The ID that YouTube uses to uniquely identify the video.",
@@ -4119,56 +4014,44 @@
             "type": "string"
           },
           "liveStreamingDetails": {
-            "$ref": "#/components/schemas/VideoLiveStreamingDetails",
-            "description": "The liveStreamingDetails object contains metadata about a live video broadcast. The object will only be present in a video resource if the video is an upcoming, live, or completed live broadcast."
+            "$ref": "#/components/schemas/VideoLiveStreamingDetails"
           },
           "localizations": {
             "additionalProperties": {
-              "$ref": "#/components/schemas/VideoLocalization",
-              "description": "The language tag, using string since map_key require simple types."
+              "$ref": "#/components/schemas/VideoLocalization"
             },
             "description": "List with all localizations.",
             "type": "object"
           },
           "monetizationDetails": {
-            "$ref": "#/components/schemas/VideoMonetizationDetails",
-            "description": "The monetizationDetails object encapsulates information about the monetization status of the video."
+            "$ref": "#/components/schemas/VideoMonetizationDetails"
           },
           "player": {
-            "$ref": "#/components/schemas/VideoPlayer",
-            "description": "The player object contains information that you would use to play the video in an embedded player."
+            "$ref": "#/components/schemas/VideoPlayer"
           },
           "processingDetails": {
-            "$ref": "#/components/schemas/VideoProcessingDetails",
-            "description": "The processingProgress object encapsulates information about YouTube's progress in processing the uploaded video file. The properties in the object identify the current processing status and an estimate of the time remaining until YouTube finishes processing the video. This part also indicates whether different types of data or content, such as file details or thumbnail images, are available for the video.\n\nThe processingProgress object is designed to be polled so that the video uploaded can track the progress that YouTube has made in processing the uploaded video file. This data can only be retrieved by the video owner."
+            "$ref": "#/components/schemas/VideoProcessingDetails"
           },
           "projectDetails": {
-            "$ref": "#/components/schemas/VideoProjectDetails",
-            "description": "The projectDetails object contains information about the project specific video metadata."
+            "$ref": "#/components/schemas/VideoProjectDetails"
           },
           "recordingDetails": {
-            "$ref": "#/components/schemas/VideoRecordingDetails",
-            "description": "The recordingDetails object encapsulates information about the location, date and address where the video was recorded."
+            "$ref": "#/components/schemas/VideoRecordingDetails"
           },
           "snippet": {
-            "$ref": "#/components/schemas/VideoSnippet",
-            "description": "The snippet object contains basic details about the video, such as its title, description, and category."
+            "$ref": "#/components/schemas/VideoSnippet"
           },
           "statistics": {
-            "$ref": "#/components/schemas/VideoStatistics",
-            "description": "The statistics object contains statistics about the video."
+            "$ref": "#/components/schemas/VideoStatistics"
           },
           "status": {
-            "$ref": "#/components/schemas/VideoStatus",
-            "description": "The status object contains information about the video's uploading, processing, and privacy statuses."
+            "$ref": "#/components/schemas/VideoStatus"
           },
           "suggestions": {
-            "$ref": "#/components/schemas/VideoSuggestions",
-            "description": "The suggestions object encapsulates suggestions that identify opportunities to improve the video quality or the metadata for the uploaded video. This data can only be retrieved by the video owner."
+            "$ref": "#/components/schemas/VideoSuggestions"
           },
           "topicDetails": {
-            "$ref": "#/components/schemas/VideoTopicDetails",
-            "description": "The topicDetails object encapsulates information about Freebase topics associated with the video."
+            "$ref": "#/components/schemas/VideoTopicDetails"
           }
         },
         "type": "object"
@@ -4215,8 +4098,7 @@
             "type": "string"
           },
           "snippet": {
-            "$ref": "#/components/schemas/VideoAbuseReportReasonSnippet",
-            "description": "The snippet object contains basic details about the abuse report reason."
+            "$ref": "#/components/schemas/VideoAbuseReportReasonSnippet"
           }
         },
         "type": "object"
@@ -4320,8 +4202,7 @@
             "type": "string"
           },
           "snippet": {
-            "$ref": "#/components/schemas/VideoCategorySnippet",
-            "description": "The snippet object contains basic details about the video category, including its title."
+            "$ref": "#/components/schemas/VideoCategorySnippet"
           }
         },
         "type": "object"
@@ -4399,12 +4280,10 @@
             "type": "string"
           },
           "contentRating": {
-            "$ref": "#/components/schemas/ContentRating",
-            "description": "Specifies the ratings that the video received under various rating schemes."
+            "$ref": "#/components/schemas/ContentRating"
           },
           "countryRestriction": {
-            "$ref": "#/components/schemas/AccessPolicy",
-            "description": "The countryRestriction object contains information about the countries where a video is (or is not) viewable."
+            "$ref": "#/components/schemas/AccessPolicy"
           },
           "definition": {
             "description": "The value of definition indicates whether the video is available in high definition or only in standard definition.",
@@ -4427,8 +4306,7 @@
             "type": "boolean"
           },
           "regionRestriction": {
-            "$ref": "#/components/schemas/VideoContentDetailsRegionRestriction",
-            "description": "The regionRestriction object contains information about the countries where a video is (or is not) viewable. The object will contain either the contentDetails.regionRestriction.allowed property or the contentDetails.regionRestriction.blocked property."
+            "$ref": "#/components/schemas/VideoContentDetailsRegionRestriction"
           }
         },
         "type": "object"
@@ -4535,8 +4413,7 @@
             "type": "string"
           },
           "recordingLocation": {
-            "$ref": "#/components/schemas/GeoPoint",
-            "description": "Geographic coordinates that identify the place where the uploaded video was recorded. Coordinates are defined using WGS 84."
+            "$ref": "#/components/schemas/GeoPoint"
           },
           "videoStreams": {
             "description": "A list of video streams contained in the uploaded video file. Each item in the list contains detailed metadata about a video stream.",
@@ -4743,8 +4620,7 @@
         "description": "Details about monetization of a YouTube Video.",
         "properties": {
           "access": {
-            "$ref": "#/components/schemas/AccessPolicy",
-            "description": "The value of access indicates whether the video can be monetized or not."
+            "$ref": "#/components/schemas/AccessPolicy"
           }
         },
         "type": "object"
@@ -4785,8 +4661,7 @@
             "type": "string"
           },
           "processingProgress": {
-            "$ref": "#/components/schemas/VideoProcessingDetailsProcessingProgress",
-            "description": "The processingProgress object contains information about the progress YouTube has made in processing the video. The values are really only relevant if the video's processing status is processing."
+            "$ref": "#/components/schemas/VideoProcessingDetailsProcessingProgress"
           },
           "processingStatus": {
             "description": "The video's processing status. This value indicates whether YouTube was able to process the video or if the video is still being processed.",
@@ -4864,8 +4739,7 @@
         "description": "Recording information associated with the video.",
         "properties": {
           "location": {
-            "$ref": "#/components/schemas/GeoPoint",
-            "description": "The geolocation information associated with the video."
+            "$ref": "#/components/schemas/GeoPoint"
           },
           "locationDescription": {
             "description": "The text description of the location where the video was recorded.",
@@ -4916,8 +4790,7 @@
             "type": "string"
           },
           "localized": {
-            "$ref": "#/components/schemas/VideoLocalization",
-            "description": "Localized snippet selected with the hl parameter. If no such localization exists, this field is populated with the default snippet. (Read-only)"
+            "$ref": "#/components/schemas/VideoLocalization"
           },
           "publishedAt": {
             "description": "The date and time that the video was uploaded. The value is specified in ISO 8601 (YYYY-MM-DDThh:mm:ss.sZ) format.",
@@ -4932,8 +4805,7 @@
             "type": "array"
           },
           "thumbnails": {
-            "$ref": "#/components/schemas/ThumbnailDetails",
-            "description": "A map of thumbnail images associated with the video. For each object in the map, the key is the name of the thumbnail image, and the value is an object that contains other information about the thumbnail."
+            "$ref": "#/components/schemas/ThumbnailDetails"
           },
           "title": {
             "description": "The video's title.",

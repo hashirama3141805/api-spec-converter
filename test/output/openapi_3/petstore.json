@@ -32,8 +32,7 @@
         "required": [
           "id",
           "type"
-        ],
-        "type": "object"
+        ]
       },
       "Cat": {
         "allOf": [
@@ -45,8 +44,7 @@
             },
             "required": [
               "likesMilk"
-            ],
-            "type": "object"
+            ]
           },
           {
             "$ref": "#/components/schemas/Animal"
@@ -62,8 +60,7 @@
           "name": {
             "type": "string"
           }
-        },
-        "type": "object"
+        }
       },
       "Order": {
         "properties": {
@@ -92,8 +89,7 @@
             ],
             "type": "string"
           }
-        },
-        "type": "object"
+        }
       },
       "Pet": {
         "properties": {
@@ -136,8 +132,7 @@
         "required": [
           "id",
           "name"
-        ],
-        "type": "object"
+        ]
       },
       "Tag": {
         "properties": {
@@ -148,8 +143,7 @@
           "name": {
             "type": "string"
           }
-        },
-        "type": "object"
+        }
       },
       "User": {
         "properties": {
@@ -185,8 +179,7 @@
           "username": {
             "type": "string"
           }
-        },
-        "type": "object"
+        }
       }
     },
     "securitySchemes": {
@@ -273,6 +266,7 @@
         "parameters": [
           {
             "description": "Status values that need to be considered for filter",
+            "explode": false,
             "in": "query",
             "name": "status",
             "required": true,
@@ -286,7 +280,8 @@
                 "type": "string"
               },
               "type": "array"
-            }
+            },
+            "style": "form"
           }
         ],
         "responses": {
@@ -345,6 +340,7 @@
         "parameters": [
           {
             "description": "Tags to filter by",
+            "explode": false,
             "in": "query",
             "name": "tags",
             "required": true,
@@ -353,7 +349,8 @@
                 "type": "string"
               },
               "type": "array"
-            }
+            },
+            "style": "form"
           }
         ],
         "responses": {
@@ -409,10 +406,20 @@
         "operationId": "uploadFile",
         "requestBody": {
           "content": {
-            "application/octet-stream": {
+            "multipart/form-data": {
               "schema": {
-                "format": "binary",
-                "type": "string"
+                "properties": {
+                  "additionalMetadata": {
+                    "description": "Additional data to pass to server",
+                    "type": "string"
+                  },
+                  "file": {
+                    "description": "file to upload",
+                    "format": "binary",
+                    "type": "string"
+                  }
+                },
+                "type": "object"
               }
             }
           }
