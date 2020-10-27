@@ -89,10 +89,12 @@
   "optionalDependencies": {
     "apib2swagger": "^1.9.0",
     "drafter.js": "^2.6.7",
-    "google-discovery-to-swagger": "^2.0.0",
+    "google-discovery-to-swagger": "^2.1.0",
     "raml-parser": "^0.8.18",
-    "raml-to-swagger": "^1.1.0",
+    "raml-to-swagger": "git+https://github.com/vimalraj2/raml-to-swagger.git",
     "swagger-converter": "^1.5.1",
-    "swagger2openapi": "6.0.0"
+    "swagger2openapi": "7.0.3"
   }
 }
+
+
