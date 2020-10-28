@@ -5039,6 +5039,11 @@
       "url": "https://google.com"
     },
     "description": "Programmatic access to YouTube features.",
+    "license": {
+      "name": "Creative Commons Attribution 3.0",
+      "url": "http://creativecommons.org/licenses/by/3.0/"
+    },
+    "termsOfService": "https://developers.google.com/terms/",
     "title": "YouTube Data API",
     "version": "v3"
   },
@@ -5168,15 +5173,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.readonly"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.readonly"
             ]
           }
@@ -5213,18 +5227,18 @@
         "operationId": "youtube.activities.insert",
         "parameters": [
           {
-            "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are snippet and contentDetails.",
-            "in": "query",
-            "name": "part",
-            "required": true,
-            "type": "string"
-          },
-          {
             "in": "body",
             "name": "body",
             "schema": {
               "$ref": "#/definitions/Activity"
             }
+          },
+          {
+            "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are snippet and contentDetails.",
+            "in": "query",
+            "name": "part",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -5239,10 +5253,16 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           }
@@ -5292,10 +5312,16 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -5359,10 +5385,16 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -5403,6 +5435,13 @@
         "operationId": "youtube.captions.insert",
         "parameters": [
           {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Caption"
+            }
+          },
+          {
             "description": "The part parameter specifies the caption resource parts that the API response will include. Set the parameter value to snippet.",
             "in": "query",
             "name": "part",
@@ -5432,13 +5471,6 @@
             "in": "query",
             "name": "sync",
             "type": "boolean"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "schema": {
-              "$ref": "#/definitions/Caption"
-            }
           }
         ],
         "responses": {
@@ -5453,10 +5485,16 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -5473,6 +5511,13 @@
         "description": "Updates a caption track. When updating a caption track, you can change the track's draft status, upload a new caption file for the track, or both.",
         "operationId": "youtube.captions.update",
         "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Caption"
+            }
+          },
           {
             "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include. Set the property value to snippet if you are updating the track's draft status. Otherwise, set the property value to id.",
             "in": "query",
@@ -5503,13 +5548,6 @@
             "in": "query",
             "name": "sync",
             "type": "boolean"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "schema": {
-              "$ref": "#/definitions/Caption"
-            }
           }
         ],
         "responses": {
@@ -5524,10 +5562,16 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -5596,10 +5640,16 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -5666,17 +5716,17 @@
         "operationId": "youtube.channelBanners.insert",
         "parameters": [
           {
-            "description": "Note: This parameter is intended exclusively for YouTube content partners.\n\nThe onBehalfOfContentOwner parameter indicates that the request's authorization credentials identify a YouTube CMS user who is acting on behalf of the content owner specified in the parameter value. This parameter is intended for YouTube content partners that own and manage many different YouTube channels. It allows content owners to authenticate once and get access to all their video and channel data, without having to provide authentication credentials for each individual channel. The CMS account that the user authenticates with must be linked to the specified YouTube content owner.",
-            "in": "query",
-            "name": "onBehalfOfContentOwner",
-            "type": "string"
-          },
-          {
             "in": "body",
             "name": "body",
             "schema": {
               "$ref": "#/definitions/ChannelBannerResource"
             }
+          },
+          {
+            "description": "Note: This parameter is intended exclusively for YouTube content partners.\n\nThe onBehalfOfContentOwner parameter indicates that the request's authorization credentials identify a YouTube CMS user who is acting on behalf of the content owner specified in the parameter value. This parameter is intended for YouTube content partners that own and manage many different YouTube channels. It allows content owners to authenticate once and get access to all their video and channel data, without having to provide authentication credentials for each individual channel. The CMS account that the user authenticates with must be linked to the specified YouTube content owner.",
+            "in": "query",
+            "name": "onBehalfOfContentOwner",
+            "type": "string"
           }
         ],
         "responses": {
@@ -5691,15 +5741,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.upload"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.upload"
             ]
           }
@@ -5737,15 +5796,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -5808,20 +5876,32 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.readonly"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.readonly"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -5858,6 +5938,13 @@
         "operationId": "youtube.channelSections.insert",
         "parameters": [
           {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ChannelSection"
+            }
+          },
+          {
             "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are snippet and contentDetails.",
             "in": "query",
             "name": "part",
@@ -5875,13 +5962,6 @@
             "in": "query",
             "name": "onBehalfOfContentOwnerChannel",
             "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "schema": {
-              "$ref": "#/definitions/ChannelSection"
-            }
           }
         ],
         "responses": {
@@ -5896,15 +5976,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -5918,6 +6007,13 @@
         "operationId": "youtube.channelSections.update",
         "parameters": [
           {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ChannelSection"
+            }
+          },
+          {
             "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are snippet and contentDetails.",
             "in": "query",
             "name": "part",
@@ -5929,13 +6025,6 @@
             "in": "query",
             "name": "onBehalfOfContentOwner",
             "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "schema": {
-              "$ref": "#/definitions/ChannelSection"
-            }
           }
         ],
         "responses": {
@@ -5950,15 +6039,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -6056,25 +6154,40 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.readonly"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.readonly"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtubepartner"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner-channel-audit"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner-channel-audit"
             ]
           }
@@ -6111,6 +6224,13 @@
         "operationId": "youtube.channels.update",
         "parameters": [
           {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Channel"
+            }
+          },
+          {
             "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are id and invideoPromotion.\n\nNote that this method will override the existing values for all of the mutable properties that are contained in any parts that the parameter value specifies.",
             "in": "query",
             "name": "part",
@@ -6122,13 +6242,6 @@
             "in": "query",
             "name": "onBehalfOfContentOwner",
             "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "schema": {
-              "$ref": "#/definitions/Channel"
-            }
           }
         ],
         "responses": {
@@ -6143,15 +6256,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -6264,6 +6386,9 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           }
         ],
@@ -6299,6 +6424,13 @@
         "operationId": "youtube.commentThreads.insert",
         "parameters": [
           {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CommentThread"
+            }
+          },
+          {
             "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are id and snippet. However only snippet contains properties that can be set.",
             "in": "query",
             "name": "part",
@@ -6311,13 +6443,6 @@
             "in": "query",
             "name": "shareOnGooglePlus",
             "type": "boolean"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "schema": {
-              "$ref": "#/definitions/CommentThread"
-            }
           }
         ],
         "responses": {
@@ -6332,6 +6457,9 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           }
         ],
@@ -6344,18 +6472,18 @@
         "operationId": "youtube.commentThreads.update",
         "parameters": [
           {
-            "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are id, snippet and replies. However only snippet contains properties that can be updated.",
-            "in": "query",
-            "name": "part",
-            "required": true,
-            "type": "string"
-          },
-          {
             "in": "body",
             "name": "body",
             "schema": {
               "$ref": "#/definitions/CommentThread"
             }
+          },
+          {
+            "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are id, snippet and replies. However only snippet contains properties that can be updated.",
+            "in": "query",
+            "name": "part",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -6369,6 +6497,9 @@
         "security": [
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           }
@@ -6399,6 +6530,9 @@
         "security": [
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           }
@@ -6469,6 +6603,9 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           }
         ],
@@ -6504,18 +6641,18 @@
         "operationId": "youtube.comments.insert",
         "parameters": [
           {
-            "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are id and snippet. However only snippet contains properties that can be set.",
-            "in": "query",
-            "name": "part",
-            "required": true,
-            "type": "string"
-          },
-          {
             "in": "body",
             "name": "body",
             "schema": {
               "$ref": "#/definitions/Comment"
             }
+          },
+          {
+            "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are id and snippet. However only snippet contains properties that can be set.",
+            "in": "query",
+            "name": "part",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -6530,6 +6667,9 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           }
         ],
@@ -6542,18 +6682,18 @@
         "operationId": "youtube.comments.update",
         "parameters": [
           {
-            "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are id and snippet. However only snippet contains properties that can be updated.",
-            "in": "query",
-            "name": "part",
-            "required": true,
-            "type": "string"
-          },
-          {
             "in": "body",
             "name": "body",
             "schema": {
               "$ref": "#/definitions/Comment"
             }
+          },
+          {
+            "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are id and snippet. However only snippet contains properties that can be updated.",
+            "in": "query",
+            "name": "part",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -6567,6 +6707,9 @@
         "security": [
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           }
@@ -6620,6 +6763,9 @@
         "security": [
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           }
@@ -6693,6 +6839,9 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           }
         ],
@@ -6745,20 +6894,32 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.readonly"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.readonly"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -6823,20 +6984,32 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.readonly"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.readonly"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -6901,20 +7074,32 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.readonly"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.readonly"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -6981,10 +7166,16 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           }
@@ -7068,15 +7259,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.readonly"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.readonly"
             ]
           }
@@ -7113,6 +7313,13 @@
         "operationId": "youtube.liveBroadcasts.insert",
         "parameters": [
           {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/LiveBroadcast"
+            }
+          },
+          {
             "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part properties that you can include in the parameter value are id, snippet, contentDetails, and status.",
             "in": "query",
             "name": "part",
@@ -7130,13 +7337,6 @@
             "in": "query",
             "name": "onBehalfOfContentOwnerChannel",
             "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "schema": {
-              "$ref": "#/definitions/LiveBroadcast"
-            }
           }
         ],
         "responses": {
@@ -7151,10 +7351,16 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           }
@@ -7167,6 +7373,13 @@
         "description": "Updates a broadcast. For example, you could modify the broadcast settings defined in the liveBroadcast resource's contentDetails object.",
         "operationId": "youtube.liveBroadcasts.update",
         "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/LiveBroadcast"
+            }
+          },
           {
             "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part properties that you can include in the parameter value are id, snippet, contentDetails, and status.\n\nNote that this method will override the existing values for all of the mutable properties that are contained in any parts that the parameter value specifies. For example, a broadcast's privacy status is defined in the status part. As such, if your request is updating a private or unlisted broadcast, and the request's part parameter value includes the status part, the broadcast's privacy setting will be updated to whatever value the request body specifies. If the request body does not specify a value, the existing privacy setting will be removed and the broadcast will revert to the default privacy setting.",
             "in": "query",
@@ -7185,13 +7398,6 @@
             "in": "query",
             "name": "onBehalfOfContentOwnerChannel",
             "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "schema": {
-              "$ref": "#/definitions/LiveBroadcast"
-            }
           }
         ],
         "responses": {
@@ -7206,10 +7412,16 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           }
@@ -7292,10 +7504,16 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           }
@@ -7390,10 +7608,16 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           }
@@ -7482,10 +7706,16 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           }
@@ -7529,10 +7759,16 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           }
@@ -7604,15 +7840,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.readonly"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.readonly"
             ]
           }
@@ -7649,6 +7894,13 @@
         "operationId": "youtube.liveStreams.insert",
         "parameters": [
           {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/LiveStream"
+            }
+          },
+          {
             "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part properties that you can include in the parameter value are id, snippet, cdn, and status.",
             "in": "query",
             "name": "part",
@@ -7666,13 +7918,6 @@
             "in": "query",
             "name": "onBehalfOfContentOwnerChannel",
             "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "schema": {
-              "$ref": "#/definitions/LiveStream"
-            }
           }
         ],
         "responses": {
@@ -7687,10 +7932,16 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           }
@@ -7703,6 +7954,13 @@
         "description": "Updates a video stream. If the properties that you want to change cannot be updated, then you need to create a new stream with the proper settings.",
         "operationId": "youtube.liveStreams.update",
         "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/LiveStream"
+            }
+          },
           {
             "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part properties that you can include in the parameter value are id, snippet, cdn, and status.\n\nNote that this method will override the existing values for all of the mutable properties that are contained in any parts that the parameter value specifies. If the request body does not specify a value for a mutable property, the existing value for that property will be removed.",
             "in": "query",
@@ -7721,13 +7979,6 @@
             "in": "query",
             "name": "onBehalfOfContentOwnerChannel",
             "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "schema": {
-              "$ref": "#/definitions/LiveStream"
-            }
           }
         ],
         "responses": {
@@ -7742,10 +7993,16 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           }
@@ -7777,15 +8034,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -7857,20 +8123,32 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.readonly"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.readonly"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -7907,6 +8185,13 @@
         "operationId": "youtube.playlistItems.insert",
         "parameters": [
           {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/PlaylistItem"
+            }
+          },
+          {
             "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are snippet, contentDetails, and status.",
             "in": "query",
             "name": "part",
@@ -7918,13 +8203,6 @@
             "in": "query",
             "name": "onBehalfOfContentOwner",
             "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "schema": {
-              "$ref": "#/definitions/PlaylistItem"
-            }
           }
         ],
         "responses": {
@@ -7939,15 +8217,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -7961,18 +8248,18 @@
         "operationId": "youtube.playlistItems.update",
         "parameters": [
           {
-            "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are snippet, contentDetails, and status.\n\nNote that this method will override the existing values for all of the mutable properties that are contained in any parts that the parameter value specifies. For example, a playlist item can specify a start time and end time, which identify the times portion of the video that should play when users watch the video in the playlist. If your request is updating a playlist item that sets these values, and the request's part parameter value includes the contentDetails part, the playlist item's start and end times will be updated to whatever value the request body specifies. If the request body does not specify values, the existing start and end times will be removed and replaced with the default settings.",
-            "in": "query",
-            "name": "part",
-            "required": true,
-            "type": "string"
-          },
-          {
             "in": "body",
             "name": "body",
             "schema": {
               "$ref": "#/definitions/PlaylistItem"
             }
+          },
+          {
+            "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are snippet, contentDetails, and status.\n\nNote that this method will override the existing values for all of the mutable properties that are contained in any parts that the parameter value specifies. For example, a playlist item can specify a start time and end time, which identify the times portion of the video that should play when users watch the video in the playlist. If your request is updating a playlist item that sets these values, and the request's part parameter value includes the contentDetails part, the playlist item's start and end times will be updated to whatever value the request body specifies. If the request body does not specify values, the existing start and end times will be removed and replaced with the default settings.",
+            "in": "query",
+            "name": "part",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -7987,15 +8274,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -8033,15 +8329,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -8125,20 +8430,32 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.readonly"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.readonly"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -8175,6 +8492,13 @@
         "operationId": "youtube.playlists.insert",
         "parameters": [
           {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Playlist"
+            }
+          },
+          {
             "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are snippet and status.",
             "in": "query",
             "name": "part",
@@ -8192,13 +8516,6 @@
             "in": "query",
             "name": "onBehalfOfContentOwnerChannel",
             "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "schema": {
-              "$ref": "#/definitions/Playlist"
-            }
           }
         ],
         "responses": {
@@ -8213,15 +8530,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -8235,6 +8561,13 @@
         "operationId": "youtube.playlists.update",
         "parameters": [
           {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Playlist"
+            }
+          },
+          {
             "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are snippet and status.\n\nNote that this method will override the existing values for all of the mutable properties that are contained in any parts that the parameter value specifies. For example, a playlist's privacy setting is contained in the status part. As such, if your request is updating a private playlist, and the request's part parameter value includes the status part, the playlist's privacy setting will be updated to whatever value the request body specifies. If the request body does not specify a value, the existing privacy setting will be removed and the playlist will revert to the default privacy setting.",
             "in": "query",
             "name": "part",
@@ -8246,13 +8579,6 @@
             "in": "query",
             "name": "onBehalfOfContentOwner",
             "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "schema": {
-              "$ref": "#/definitions/Playlist"
-            }
           }
         ],
         "responses": {
@@ -8267,15 +8593,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -8556,20 +8891,32 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.readonly"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.readonly"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -8624,15 +8971,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -8734,20 +9090,32 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.readonly"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.readonly"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -8784,18 +9152,18 @@
         "operationId": "youtube.subscriptions.insert",
         "parameters": [
           {
-            "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are snippet and contentDetails.",
-            "in": "query",
-            "name": "part",
-            "required": true,
-            "type": "string"
-          },
-          {
             "in": "body",
             "name": "body",
             "schema": {
               "$ref": "#/definitions/Subscription"
             }
+          },
+          {
+            "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are snippet and contentDetails.",
+            "in": "query",
+            "name": "part",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -8810,15 +9178,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -8887,20 +9264,32 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.upload"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.upload"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -8942,15 +9331,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.readonly"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.readonly"
             ]
           }
@@ -9027,20 +9425,32 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.readonly"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.readonly"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -9101,15 +9511,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -9219,20 +9638,32 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.readonly"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.readonly"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -9273,6 +9704,13 @@
         "operationId": "youtube.videos.insert",
         "parameters": [
           {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Video"
+            }
+          },
+          {
             "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are snippet, contentDetails, fileDetails, liveStreamingDetails, localizations, player, processingDetails, recordingDetails, statistics, status, suggestions, and topicDetails. However, not all of those parts contain properties that can be set when setting or updating a video's metadata. For example, the statistics object encapsulates statistics that YouTube calculates for a video and does not contain values that you can set or modify. If the parameter value specifies a part that does not contain mutable values, that part will still be included in the API response.",
             "in": "query",
             "name": "part",
@@ -9309,13 +9747,6 @@
             "in": "query",
             "name": "stabilize",
             "type": "boolean"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "schema": {
-              "$ref": "#/definitions/Video"
-            }
           }
         ],
         "responses": {
@@ -9330,20 +9761,32 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.upload"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.upload"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -9357,6 +9800,13 @@
         "operationId": "youtube.videos.update",
         "parameters": [
           {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Video"
+            }
+          },
+          {
             "description": "The part parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include.\n\nThe part names that you can include in the parameter value are snippet, contentDetails, fileDetails, liveStreamingDetails, localizations, player, processingDetails, recordingDetails, statistics, status, suggestions, and topicDetails.\n\nNote that this method will override the existing values for all of the mutable properties that are contained in any parts that the parameter value specifies. For example, a video's privacy setting is contained in the status part. As such, if your request is updating a private video, and the request's part parameter value includes the status part, the video's privacy setting will be updated to whatever value the request body specifies. If the request body does not specify a value, the existing privacy setting will be removed and the video will revert to the default privacy setting.\n\nIn addition, not all of those parts contain properties that can be set when setting or updating a video's metadata. For example, the statistics object encapsulates statistics that YouTube calculates for a video and does not contain values that you can set or modify. If the parameter value specifies a part that does not contain mutable values, that part will still be included in the API response.",
             "in": "query",
             "name": "part",
@@ -9368,13 +9818,6 @@
             "in": "query",
             "name": "onBehalfOfContentOwner",
             "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "schema": {
-              "$ref": "#/definitions/Video"
-            }
           }
         ],
         "responses": {
@@ -9389,15 +9832,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -9438,15 +9890,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -9542,15 +10003,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -9589,17 +10059,17 @@
         "operationId": "youtube.videos.reportAbuse",
         "parameters": [
           {
-            "description": "Note: This parameter is intended exclusively for YouTube content partners.\n\nThe onBehalfOfContentOwner parameter indicates that the request's authorization credentials identify a YouTube CMS user who is acting on behalf of the content owner specified in the parameter value. This parameter is intended for YouTube content partners that own and manage many different YouTube channels. It allows content owners to authenticate once and get access to all their video and channel data, without having to provide authentication credentials for each individual channel. The CMS account that the user authenticates with must be linked to the specified YouTube content owner.",
-            "in": "query",
-            "name": "onBehalfOfContentOwner",
-            "type": "string"
-          },
-          {
             "in": "body",
             "name": "body",
             "schema": {
               "$ref": "#/definitions/VideoAbuseReport"
             }
+          },
+          {
+            "description": "Note: This parameter is intended exclusively for YouTube content partners.\n\nThe onBehalfOfContentOwner parameter indicates that the request's authorization credentials identify a YouTube CMS user who is acting on behalf of the content owner specified in the parameter value. This parameter is intended for YouTube content partners that own and manage many different YouTube channels. It allows content owners to authenticate once and get access to all their video and channel data, without having to provide authentication credentials for each individual channel. The CMS account that the user authenticates with must be linked to the specified YouTube content owner.",
+            "in": "query",
+            "name": "onBehalfOfContentOwner",
+            "type": "string"
           }
         ],
         "responses": {
@@ -9611,15 +10081,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -9663,6 +10142,13 @@
         "operationId": "youtube.watermarks.set",
         "parameters": [
           {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/InvideoBranding"
+            }
+          },
+          {
             "description": "The channelId parameter specifies a YouTube channel ID for which the watermark is being provided.",
             "in": "query",
             "name": "channelId",
@@ -9674,13 +10160,6 @@
             "in": "query",
             "name": "onBehalfOfContentOwner",
             "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "schema": {
-              "$ref": "#/definitions/InvideoBranding"
-            }
           }
         ],
         "responses": {
@@ -9692,20 +10171,32 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.upload"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.upload"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -9766,15 +10257,24 @@
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube"
             ]
           },
           {
             "Oauth2": [
               "https://www.googleapis.com/auth/youtube.force-ssl"
+            ],
+            "Oauth2c": [
+              "https://www.googleapis.com/auth/youtube.force-ssl"
             ]
           },
           {
             "Oauth2": [
+              "https://www.googleapis.com/auth/youtubepartner"
+            ],
+            "Oauth2c": [
               "https://www.googleapis.com/auth/youtubepartner"
             ]
           }
@@ -9791,7 +10291,7 @@
   "securityDefinitions": {
     "Oauth2": {
       "authorizationUrl": "https://accounts.google.com/o/oauth2/auth",
-      "description": "Oauth 2.0 authentication",
+      "description": "Oauth 2.0 implicit authentication",
       "flow": "implicit",
       "scopes": {
         "https://www.googleapis.com/auth/youtube": "Manage your YouTube account",
@@ -9801,6 +10301,21 @@
         "https://www.googleapis.com/auth/youtubepartner": "View and manage your assets and associated content on YouTube",
         "https://www.googleapis.com/auth/youtubepartner-channel-audit": "View private information of your YouTube channel relevant during the audit process with a YouTube partner"
       },
+      "type": "oauth2"
+    },
+    "Oauth2c": {
+      "authorizationUrl": "https://accounts.google.com/o/oauth2/auth",
+      "description": "Oauth 2.0 accessCode authentication",
+      "flow": "accessCode",
+      "scopes": {
+        "https://www.googleapis.com/auth/youtube": "Manage your YouTube account",
+        "https://www.googleapis.com/auth/youtube.force-ssl": "Manage your YouTube account",
+        "https://www.googleapis.com/auth/youtube.readonly": "View your YouTube account",
+        "https://www.googleapis.com/auth/youtube.upload": "Manage your YouTube videos",
+        "https://www.googleapis.com/auth/youtubepartner": "View and manage your assets and associated content on YouTube",
+        "https://www.googleapis.com/auth/youtubepartner-channel-audit": "View private information of your YouTube channel relevant during the audit process with a YouTube partner"
+      },
+      "tokenUrl": "https://accounts.google.com/o/oauth2/token",
       "type": "oauth2"
     }
   },
